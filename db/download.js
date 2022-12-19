@@ -25,5 +25,5 @@ const seedCompanies = async () => {
   }
 };
 
-// seedPeople();
+seedPeople();
 seedCompanies();
