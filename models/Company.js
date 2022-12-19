@@ -26,48 +26,47 @@ const companySchema = new Schema({
     subcategory_3: String,
     reasoning: {
         type: String,
-        required: true
+
     },
     address: String,
     sanction_es:{
         type: Number,
-        required: true
     },
     sanction_gb:{
         type: Number,
-        required: true
+
     },
     sanction_us:{
         type: Number,
-        required: true
+
     },
     sanction_ca:{
         type: Number,
-        required: true
+
     },
     sanction_ch:{
         type: Number,
-        required: true
+
     },
     sanction_au:{
         type: Number,
-        required: true
+
     },
     sanction_jp:{
         type: Number,
-        required: true
+
     },
     sanction_pl:{
         type: Number,
-        required: true
+
     },
     sanction_ua:{
         type: Number,
-        required: true
+
     },
     sanction_nz:{
         type: Number,
-        required: true
+
     },
     sanction_es_date: Date,
     sanction_gb_date: Date,

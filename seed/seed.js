@@ -1,8 +1,7 @@
-import mongoose from 'mongoose'
-import connection from '../connection.js'
-import cData from './companies.json' assert { type: 'json' }
+import database from '../db/connection.js'
+import cData from './companies.json' assert { type: "json" }
 import Company from '../models/Company.js'
-import pData from "./persons.json"
+import pData from "./persons.json" assert { type: "json" }
 import Person from "../models/Person.js"
 
 let companyData = cData.map(co => {
@@ -82,3 +81,13 @@ let personData = pData.map(per => {
     person.related_companies = per.relations_company
     return person
 })
+
+const dataInsertion = async () => {
+    await database.dropDatabase()
+    await Company.create(companyData)
+    await Person.create(personData)
+    await database.close()
+}
+
+dataInsertion()
+

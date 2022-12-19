@@ -3,10 +3,10 @@ import * as controllers from "../controllers/companies.js"
 
 const router = Router()
 
-router.get("/", getCompanies)
-router.get("/:id", getCompany)
-router.post("/", createCompany)
-router.put("/:id", updateCompany)
-router.delete("/:id", deleteCompany)
+router.get("/", controllers.getCompanies)
+router.get("/:id", controllers.getCompany)
+router.post("/", controllers.createCompany)
+router.put("/:id", controllers.updateCompany)
+router.delete("/:id", controllers.deleteCompany)
 
 export default router

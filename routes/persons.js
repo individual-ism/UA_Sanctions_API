@@ -3,10 +3,10 @@ import * as controllers from "../controllers/persons.js"
 
 const router = Router()
 
-router.get("/", getPersons)
-router.get("/:id", getPerson)
-router.post("/", createPerson)
-router.put("/:id", updatePerson)
-router.delete("/:id", deletePerson)
+router.get("/", controllers.getPersons)
+router.get("/:id", controllers.getPerson)
+router.post("/", controllers.createPerson)
+router.put("/:id", controllers.updatePerson)
+router.delete("/:id", controllers.deletePerson)
 
 export default router
