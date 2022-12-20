@@ -14,70 +14,93 @@ const companySchema = new Schema({
     },
     name_ru: {
         type: String,
-        required: true
+        // required: true
     },
     country: {
         type: String,
         required: true
     },
-    category: String,
-    subcategory_1: String,
-    subcategory_2: String,
-    subcategory_3: String,
+    category: {
+        type: String,
+        // required: true
+    },
+    subcategory_1: {
+        type: String,
+        // required: true
+    },
+    subcategory_2: {
+        type: String,
+        // required: true
+    },
+    subcategory_3: {
+        type: String,
+        // required: true
+    },
     reasoning: {
         type: String,
 
     },
     address: String,
-    sanction_es:{
-        type: Number,
+    sanctions_es:{
+        type: Number
     },
-    sanction_gb:{
-        type: Number,
-
+    sanctions_gb:{
+        type: Number
     },
-    sanction_us:{
-        type: Number,
-
+    sanctions_us:{
+        type: Number
     },
-    sanction_ca:{
-        type: Number,
-
+    sanctions_ca:{
+        type: Number
     },
-    sanction_ch:{
-        type: Number,
-
+    sanctions_ch:{
+        type: Number
     },
-    sanction_au:{
-        type: Number,
-
+    sanctions_au:{
+        type: Number
     },
-    sanction_jp:{
-        type: Number,
-
+    sanctions_jp:{
+        type: Number
     },
-    sanction_pl:{
-        type: Number,
-
+    sanctions_pl:{
+        type: Number
     },
-    sanction_ua:{
-        type: Number,
-
+    sanctions_ua:{
+        type: Number
     },
-    sanction_nz:{
-        type: Number,
-
+    sanctions_nz:{
+        type: Number
     },
-    sanction_es_date: Date,
-    sanction_gb_date: Date,
-    sanction_us_date: Date,
-    sanction_ca_date: Date,
-    sanction_ch_date: Date,
-    sanction_au_date: Date,
-    sanction_jp_date: Date,
-    sanction_pl_date: Date,
-    sanction_ua_date: Date,
-    sanction_nz_date: Date,
+    sanctions_es_date: {
+        type: String
+    },
+    sanctions_gb_date: {
+        type: String
+    },
+    sanctions_us_date: {
+        type: String
+    },
+    sanctions_ca_date: {
+        type: String
+    },
+    sanctions_ch_date: {
+        type: String
+    },
+    sanctions_au_date: {
+        type: String
+    },
+    sanctions_jp_date: {
+        type: String
+    },
+    sanctions_pl_date: {
+        type: String
+    },
+    sanctions_ua_date: {
+        type: String
+    },
+    sanctions_nz_date: {
+        type: String
+    },
     related_persons: Array,
     related_companies: Array
 })

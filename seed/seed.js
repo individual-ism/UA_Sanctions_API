@@ -17,30 +17,31 @@ let companyData = cData.map(co => {
     co.subcategory_3 ? company.subcategory_3 = co.subcategory_3 : company.subcategory_3 = ""
     company.reasoning = co.reasoning_en
     company.address = co.address_en
-    company.sanction_es = co.sanction_es
-    company.sanction_gb = co.sanction_gb
-    company.sanction_us = co.sanction_us
-    company.sanction_ca = co.sanction_ca
-    company.sanction_ch = co.sanction_ch
-    company.sanction_au = co.sanction_au
-    company.sanction_jp = co.sanction_jp
-    company.sanction_pl = co.sanction_pl
-    company.sanction_ua = co.sanction_ua
-    company.sanction_nz = co.sanction_nz
-    company.sanction_es_date = co.sanction_es_date
-    company.sanction_gb_date = co.sanction_gb_date
-    company.sanction_us_date = co.sanction_us_date
-    company.sanction_ca_date = co.sanction_ca_date
-    company.sanction_ch_date = co.sanction_ch_date
-    company.sanction_au_date = co.sanction_au_date
-    company.sanction_jp_date = co.sanction_jp_date
-    company.sanction_pl_date = co.sanction_pl_date
-    company.sanction_ua_date = co.sanction_ua_date
-    company.sanction_nz_date = co.sanction_nz_date
+    company.sanctions_gb = co.sanctions_gb
+    company.sanctions_us = co.sanctions_us
+    company.sanctions_ca = co.sanctions_ca
+    company.sanctions_ch = co.sanctions_ch
+    company.sanctions_au = co.sanctions_au
+    company.sanctions_jp = co.sanctions_jp
+    company.sanctions_pl = co.sanctions_pl
+    company.sanctions_ua = co.sanctions_ua
+    company.sanctions_nz = co.sanctions_nz
+    company.sanctions_es_date = co.sanctions_es_date
+    company.sanctions_gb_date = co.sanctions_gb_date
+    company.sanctions_us_date = co.sanctions_us_date
+    company.sanctions_ca_date = co.sanctions_ca_date
+    company.sanctions_ch_date = co.sanctions_ch_date
+    company.sanctions_au_date = co.sanctions_au_date
+    company.sanctions_jp_date = co.sanctions_jp_date
+    company.sanctions_pl_date = co.sanctions_pl_date
+    company.sanctions_ua_date = co.sanctions_ua_date
+    company.sanctions_nz_date = co.sanctions_nz_date
     company.related_persons = co.relations_person
     company.related_companies = co.relations_company
     return company
 })
+
+
 
 let personData = pData.map(per => {
     let person = {}
@@ -53,26 +54,26 @@ let personData = pData.map(per => {
     per.subcategory_1 ? person.subcategory_1 = per.subcategory_1 : person.subcategory_1 = ""
     per.subcategory_2 ? person.subcategory_2 = per.subcategory_2 : person.subcategory_2 = ""
     per.subcategory_3 ? person.subcategory_3 = per.subcategory_3 : person.subcategory_3 = ""
-    person.sanction_es = per.sanction_es
-    person.sanction_gb = per.sanction_gb
-    person.sanction_us = per.sanction_us
-    person.sanction_ca = per.sanction_ca
-    person.sanction_ch = per.sanction_ch
-    person.sanction_au = per.sanction_au
-    person.sanction_jp = per.sanction_jp
-    person.sanction_pl = per.sanction_pl
-    person.sanction_ua = per.sanction_ua
-    person.sanction_nz = per.sanction_nz
-    person.sanction_es_date = per.sanction_es_date
-    person.sanction_gb_date = per.sanction_gb_date
-    person.sanction_us_date = per.sanction_us_date
-    person.sanction_ca_date = per.sanction_ca_date
-    person.sanction_ch_date = per.sanction_ch_date
-    person.sanction_au_date = per.sanction_au_date
-    person.sanction_jp_date = per.sanction_jp_date
-    person.sanction_pl_date = per.sanction_pl_date
-    person.sanction_ua_date = per.sanction_ua_date
-    person.sanction_nz_date = per.sanction_nz_date
+    person.sanctions_es = per.sanctions_es
+    person.sanctions_gb = per.sanctions_gb
+    person.sanctions_us = per.sanctions_us
+    person.sanctions_ca = per.sanctions_ca
+    person.sanctions_ch = per.sanctions_ch
+    person.sanctions_au = per.sanctions_au
+    person.sanctions_jp = per.sanctions_jp
+    person.sanctions_pl = per.sanctions_pl
+    person.sanctions_ua = per.sanctions_ua
+    person.sanctions_nz = per.sanctions_nz
+    person.sanctions_es_date = per.sanctions_es_date
+    person.sanctions_gb_date = per.sanctions_gb_date
+    person.sanctions_us_date = per.sanctions_us_date
+    person.sanctions_ca_date = per.sanctions_ca_date
+    person.sanctions_ch_date = per.sanctions_ch_date
+    person.sanctions_au_date = per.sanctions_au_date
+    person.sanctions_jp_date = per.sanctions_jp_date
+    person.sanctions_pl_date = per.sanctions_pl_date
+    person.sanctions_ua_date = per.sanctions_ua_date
+    person.sanctions_nz_date = per.sanctions_nz_date
     person.photo = per.photo_name
     person.dob = per.date_bd
     per.date_dead ? person.dod = per.date_dead : person.dod = ""

@@ -4,7 +4,7 @@ export const getCompanies = async (req, res) => {
     try {
         const companies = await Company.find({})
         res.json(companies)
-    } catch {
+    } catch (error) {
         console.error(error)
         res.status(500).json({error: error.message})
     }
@@ -15,7 +15,7 @@ export const getCompany = async (req, res) => {
         const {id} = req.params
         const company = await Company.findById(id)
         res.json(company)
-    } catch {
+    } catch (error) {
         console.error(error)
         res.status(500).json({error: error.message})
     }
@@ -26,7 +26,7 @@ export const createCompany = async (req, res) => {
         const company = new Company(req.body)
         await company.save()
         res.status(201).json(company)
-    } catch {
+    } catch (error) {
         console.error(error)
         res.status(500).json({error: error.message})
     }
@@ -37,7 +37,7 @@ export const updateCompany = async (req, res) => {
         const {id} = req.params
         const company = await Company.findByIdAndUpdate(id, req.body)
         res.status(201).json(company)
-    } catch {
+    } catch (error) {
         console.error(error)
         res.status(500).json({error: error.message})
     }
@@ -47,12 +47,8 @@ export const deleteCompany = async (req, res) => {
     try {
         const {id} = req.params
         const companyDeleted = await Company.findByIdAndDelete(id)
-        if (companyDeleted) {
-            res.status(200).json("Company deleted from database.")
-        }
-        throw new error("Company not found in database.")
     }
-    catch {
+    catch (error) {
         console.error(error)
         res.status(500).json({error: error.message})
     }

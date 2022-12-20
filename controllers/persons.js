@@ -47,10 +47,6 @@ export const deletePerson = async (req, res) => {
     try {
         const {id} = req.params
         const personDeleted = await Person.findByIdAndDelete(id)
-        if (personDeleted) {
-            res.status(200).json("Person deleted from database.")
-        }
-        throw new error("Person not found in database.")
     }
     catch {
         console.error(error)

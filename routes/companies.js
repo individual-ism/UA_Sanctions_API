@@ -4,7 +4,7 @@ import * as controllers from "../controllers/companies.js"
 const router = Router()
 
 router.get("/", controllers.getCompanies)
-router.get("/:id?/:company_id?/:name_en", controllers.getCompany)
+router.get("/:id?/:company_id?/:name_en?", controllers.getCompany)
 router.post("/", controllers.createCompany)
 router.put("/:id", controllers.updateCompany)
 router.delete("/:id", controllers.deleteCompany)

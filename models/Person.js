@@ -30,56 +30,48 @@ const personSchema = new Schema({
     subcategory_1: String,
     subcategory_2: String,
     subcategory_3: String,
-    sanction_es: {
-        type: Number,
-
+    sanctions_es: {
+        type: Number
     },
-    sanction_gb: {
-        type: Number,
-
+    sanctions_gb: {
+        type: Number
     },
-    sanction_us: {
-        type: Number,
-
+    sanctions_us: {
+        type: Number
     },
-    sanction_ca: {
-        type: Number,
-
+    sanctions_ca: {
+        type: Number
     },
-    sanction_ch: {
-        type: Number,
-
+    sanctions_ch: {
+        type: Number
     },
-    sanction_au: {
-        type: Number,
-
+    sanctions_au: {
+        type: Number
     },
-    sanction_jp: {
-        type: Number,
-
+    sanctions_jp: {
+        type: Number
     },
-    sanction_pl: {
-        type: Number,
-
+    sanctions_pl: {
+        type: Number
     },
-    sanction_ua: {
-        type: Number,
-
+    sanctions_ua: {
+        type: Number
     },
-    sanction_nz: {
-        type: Number,
-
+    sanctions_nz: {
+        type: Number
     },
-    sanction_es_date: Date,
-    sanction_gb_date: Date,
-    sanction_us_date: Date,
-    sanction_ca_date: Date,
-    sanction_ch_date: Date,
-    sanction_au_date: Date,
-    sanction_jp_date: Date,
-    sanction_pl_date: Date,
-    sanction_ua_date: Date,
-    sanction_nz_date: Date,
+    sanctions_es_date: {
+        type: String
+    },
+    sanctions_gb_date: String,
+    sanctions_us_date: String,
+    sanctions_ca_date: String,
+    sanctions_ch_date: String,
+    sanctions_au_date: String,
+    sanctions_jp_date: String,
+    sanctions_pl_date: String,
+    sanctions_ua_date: String,
+    sanctions_nz_date: String,
     photo: String,
     dob: String,
     dod: String,
