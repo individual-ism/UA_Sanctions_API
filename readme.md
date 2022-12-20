@@ -12,13 +12,13 @@ This API has two primary components: Individuals and Companies. Requests for eac
 
 ##### Companies
  For ***all*** companies, or to add a new company to the list, use "***/***"  
- For a ***specific*** company based on ***ID***, use "***:id***"  
- For a ***specific*** company based on ***name***, use "***name/:name_en***"  
+ For a ***specific*** company based on ***ID***, use "***/:id***"  
+ For a ***specific*** company based on ***name***, use "***/name/:name_en***"  
 
  ##### Persons
- For ***all*** persons, or to add a new person to the list, use "******"  
- For a ***specific*** person based on ***ID***, use "***:id***"  
- For a ***specific*** person based on ***name***, use "***name/:name_en***"  
+ For ***all*** persons, or to add a new person to the list, use "***/***"  
+ For a ***specific*** person based on ***ID***, use "***/:id***"  
+ For a ***specific*** person based on ***name***, use "***/name/:name_en***"  
 
 ### Technology Utilized
 Express | MongoDB | Mongoose | Node.js | Cors | Morgan
