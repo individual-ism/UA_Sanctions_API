@@ -12,10 +12,6 @@ mongoose.connect("mongodb://localhost:27017/uasanctions", mongooseConfig).catch(
     console.log("Error", error)
 })
 
-// mongoose.connection.on("connected", () => {
-//     console.log("Connection to MongoDB: Successful")
-// })
-
 mongoose.connection.on("disconnected", () => {
     console.log("Connection to MongoDB: Disconnected")
 })

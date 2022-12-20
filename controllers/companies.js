@@ -21,6 +21,17 @@ export const getCompany = async (req, res) => {
     }
 }
 
+export const getCompanyByName = async (req, res) => {
+    try {
+        const {name_en} = req.params
+        const company = await Company.find({name_en: name_en})
+        res.json(company)
+    } catch (error) {
+        console.error(error)
+        res.status(500).json({error: error.message})
+    }
+}
+
 export const createCompany = async (req, res) => {
     try {
         const company = new Company(req.body)
