@@ -5,7 +5,7 @@ import morgan from "morgan"
 import routes from "./routes/index.js"
 
 let application = express()
-let PORT = 4150
+let PORT = process.env.PORT || 4150
 
 application.use(cors())
 application.use(express.json())
@@ -17,6 +17,6 @@ database.on("connected", () => {
     console.clear()
     console.log("Connection to MongoDB: Successful")
     application.listen(PORT, () => {
-        console.log(`Listening on ${PORT}`)
+        console.log(`Listening on port ${PORT}`)
     })
 })
