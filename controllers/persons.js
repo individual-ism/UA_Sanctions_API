@@ -21,6 +21,17 @@ export const getPerson = async (req, res) => {
     }
 }
 
+export const getPersonByName = async (req, res) => {
+    try {
+        const {name_en} = req.params
+        const person = await Person.find({name_en: name_en})
+        res.json(person)
+    } catch (error) {
+        console.error(error)
+        res.status(500).json({error: error.message})
+    }
+}
+
 export const createPerson = async (req, res) => {
     try {
         const person = new Person(req.body)

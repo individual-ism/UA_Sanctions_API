@@ -5,6 +5,7 @@ const router = Router()
 
 router.get("/", controllers.getPersons)
 router.get("/:id", controllers.getPerson)
+router.get("/name/:name_en", controllers.getPersonByName)
 router.post("/", controllers.createPerson)
 router.put("/:id", controllers.updatePerson)
 router.delete("/:id", controllers.deletePerson)

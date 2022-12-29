@@ -8,7 +8,7 @@ This API is bears information on the Ukrainian sanctions list
 **слава україні**
 
 ### Searching with API
-This API has two primary components: Individuals and Companies. Requests for each should use the following endpoints:
+This API has two primary components: Persons and Companies. Requests for each should use the following endpoints:
 
 ##### Companies
  For ***all*** companies, or to add a new company to the list, use "***/***"  
@@ -22,7 +22,6 @@ This API has two primary components: Individuals and Companies. Requests for eac
 
 ### Technology Utilized
 Express | MongoDB | Mongoose | Node.js | Cors | Morgan
-
 
 ### Potential Amendments & Implementations
 1. Translate additional fields into English.

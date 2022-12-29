@@ -5,7 +5,7 @@ import morgan from "morgan"
 import routes from "./routes/index.js"
 
 let application = express()
-let PORT = 4250
+let PORT = 4150
 
 application.use(cors())
 application.use(express.json())
