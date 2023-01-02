@@ -12,18 +12,23 @@ This API can be reached at its primary root at ***https://api-project-production
 
   #### Retrieving All
   To retrieve all companies or persons, use the base root, followed by "/companies" or "/persons", respectively. The URL should reflect one of the following:  
+
     ***https://api-project-production-8128.up.railway.app/companies***  
     ***https://api-project-production-8128.up.railway.app/persons***  
 
   #### Retrieving Individual Records
   To retrieve an individual record for a company or person, use the respective URL under "Retrieving All" and add the required ObjectID after a forward slash. An example of each has been provided below:  
+
     ***https://api-project-production-8128.up.railway.app/companies/63add33d63ee199b43d12204***  //Central Bank of the Russian Federation (Bank of Russia)  
     ***https://api-project-production-8128.up.railway.app/persons/63add35b63ee199b43d13ca0***  //DOROSHENKO Andrey Nikolaevich  
 
   #### Retrieving Individual Records By Name
   To retrieve an individual record for a company or person by name, use the respective URL under "Retrieving All" and add "/name/", followed by the name of the company or person sought. 
+  
   **N.B.** This function is partially functional; as such, not all records may be discoverable by this method. Names must be entered exactly as they are written within the database. This function was tested in Firefox and spaces were permitted; however, proper syntax replaces the spaces with "%20".
+  
   Examples:  
+
     ***https://api-project-production-8128.up.railway.app/companies/name/Central%20Bank%20of%20the%20Russian%20Federation%20(Bank%20of%20Russia)***  
     ***https://api-project-production-8128.up.railway.app/persons/name/DOROSHENKO%20Andrey%20Nikolaevich***  
 
