@@ -1,18 +1,18 @@
 # Ukraine Sanctions
 
+![Слава Україні | Героям Слава](./%D1%81%D0%BB%D0%B0%D0%B2%D0%B0.jpg)
+
 ## Description
 In light of the invasion by Russia on the 24th of February 2022, it is imperative that information be propagated regarding the entities - both individuals and enterprises - which undermine the struggle for freedom. Although some may be compelled to dismiss the war as a "far away" conflict - not warranting the attention of those whose lives are far removed from it - this is the mentality which allowed both world wars to become the abominations they were. The ultimate conclusion of this war has definitive implications and explications on the world entire.
 
 This API is bears information on the Ukrainian sanctions list, as of December 2022. 
 
-**слава україні**
-
 ## Searching with API
 This API can be reached at its primary root at ***https://api-project-production-8128.up.railway.app***. It has two primary components: Persons and Companies. Requests for each should use the following endpoints, with the specific purposes outlined further below:
 
-  Root: "/"  
-  ID: "/:id"  
-  Name: "/name/:name_en"  
+  - Root: "/"  
+  - ID: "/:id"  
+  - Name: "/name/:name_en"  
 
   ### Retrieving All
   To retrieve all companies or persons, use the base root, followed by "/companies" or "/persons", respectively. The URL should reflect one of the following:  
