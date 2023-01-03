@@ -20,11 +20,15 @@ This API can be reached at its primary root at ***https://api-project-production
     https://api-project-production-8128.up.railway.app/companies  
     https://api-project-production-8128.up.railway.app/persons  
 
+  ![All Companies](./ac.jpg)
+
   ### Retrieving Individual Records
   To retrieve an individual record for a company or person, use the respective URL under "Retrieving All" and add the required ObjectID after a forward slash. An example of each has been provided below:  
 
     https://api-project-production-8128.up.railway.app/companies/63add33d63ee199b43d12204  //Central Bank of the Russian Federation (Bank of Russia)  
-    https://api-project-production-8128.up.railway.app/persons/63add35b63ee199b43d13ca0  //DOROSHENKO Andrey Nikolaevich  
+    https://api-project-production-8128.up.railway.app/persons/63add35b63ee199b43d13ca0  //DOROSHENKO Andrey Nikolaevich 
+
+  ![Individual Record By ID](./icbid.jpg) 
 
   ### Retrieving Individual Records By Name
   To retrieve an individual record for a company or person by name, use the respective URL under "Retrieving All" and add "/name/", followed by the name of the company or person sought. 
@@ -35,6 +39,8 @@ This API can be reached at its primary root at ***https://api-project-production
 
     https://api-project-production-8128.up.railway.app/companies/name/Central%20Bank%20of%20the%20Russian%20Federation%20(Bank%20of%20Russia)  
     https://api-project-production-8128.up.railway.app/persons/name/DOROSHENKO%20Andrey%20Nikolaevich  
+
+  ![Individual Record By Name](./ipbn.jpg)
 
   ### Creating New Records
   To generate a new record, all post requests should be sent to the respective URL listed under "Retrieve All". The body of the request must contain the following required fields for both companies and persons: the name in English (name_en), the name in Russian (name_ru), and the company or person ID (company_id; person_id). The comprehensive list of available fields can be found in the "models" folder of the repository, available [here][GitHub_Repository].
@@ -56,7 +62,6 @@ This API can be reached at its primary root at ***https://api-project-production
 
 ## Notes
 - All testing of the API for access - both prior to and following deployment - was conducted utilizing Firefox.
-- All testing of the CRUD functionality was conducted utilizing Postman.
 
 ## Potential Amendments & Implementations
 1. Create a search bar at the base root to search for records based on partial elements of given fields.
