@@ -7,14 +7,15 @@ const companySchema = new Schema({
         type: Number,
         required: true
     },
-    logo: String,
+    logo: {
+        type: String
+    },
     name_en: {
         type: String,
         required: true
     },
     name_ru: {
         type: String,
-        // required: true
     },
     country: {
         type: String,
@@ -22,25 +23,22 @@ const companySchema = new Schema({
     },
     category: {
         type: String,
-        // required: true
     },
     subcategory_1: {
         type: String,
-        // required: true
     },
     subcategory_2: {
         type: String,
-        // required: true
     },
     subcategory_3: {
         type: String,
-        // required: true
     },
     reasoning: {
         type: String,
-
     },
-    address: String,
+    address: {
+        type: String
+    },
     sanctions_es:{
         type: Number
     },
@@ -101,8 +99,12 @@ const companySchema = new Schema({
     sanctions_nz_date: {
         type: String
     },
-    related_persons: Array,
-    related_companies: Array
+    related_persons: {
+        type: Array
+    },
+    related_companies: {
+        type: Array
+    }
 })
 
 export default mongoose.model("companies", companySchema)

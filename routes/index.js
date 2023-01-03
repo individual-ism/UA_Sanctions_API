@@ -1,7 +1,6 @@
 import { Router } from "express";
 import personRoutes from "./persons.js"
 import companyRoutes from "./companies.js"
-// import path from "node"
 import path from "path"
 import { nextTick } from "process";
 
@@ -20,10 +19,8 @@ router.get("/", (req, res) => {
         } else {
             console.log("Sent: ", fileName)
         }
-    }
-    )})
-//     res.send("API root")
-// })
+    })
+})
 
 router.use("/companies", companyRoutes)
 router.use("/persons", personRoutes)

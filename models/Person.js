@@ -17,19 +17,22 @@ const personSchema = new Schema({
     },
     position: {
         type: String,
-
     },
     reasoning: {
         type: String,
-
     },
     category: {
         type: String,
-
     },
-    subcategory_1: String,
-    subcategory_2: String,
-    subcategory_3: String,
+    subcategory_1: {
+        type: String
+    },
+    subcategory_2: {
+        type: String
+    },
+    subcategory_3: {
+        type: String
+    },
     sanctions_es: {
         type: Number
     },
@@ -63,21 +66,51 @@ const personSchema = new Schema({
     sanctions_es_date: {
         type: String
     },
-    sanctions_gb_date: String,
-    sanctions_us_date: String,
-    sanctions_ca_date: String,
-    sanctions_ch_date: String,
-    sanctions_au_date: String,
-    sanctions_jp_date: String,
-    sanctions_pl_date: String,
-    sanctions_ua_date: String,
-    sanctions_nz_date: String,
-    photo: String,
-    dob: String,
-    dod: String,
-    cob: String,
-    related_persons: Array,
-    related_companies: Array
+    sanctions_gb_date: {
+        type: String
+    },
+    sanctions_us_date: {
+        type: String
+    },
+    sanctions_ca_date: {
+        type: String
+    },
+    sanctions_ch_date: {
+        type: String
+    },
+    sanctions_au_date: {
+        type: String
+    },
+    sanctions_jp_date: {
+        type: String
+    },
+    sanctions_pl_date: {
+        type: String
+    },
+    sanctions_ua_date: {
+        type: String
+    },
+    sanctions_nz_date: {
+        type: String
+    },
+    photo: {
+        type: String
+    },
+    dob: {
+        type: String
+    },
+    dod: {
+        type: String
+    },
+    cob: {
+        type: String
+    },
+    related_persons: {
+        type: Array
+    },
+    related_companies: {
+        type: Array
+    }
 })
 
 export default mongoose.model("persons", personSchema)
