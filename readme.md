@@ -8,21 +8,25 @@ This API is bears information on the Ukrainian sanctions list, as of December 20
 **слава україні**
 
 ## Searching with API
-This API can be reached at its primary root at ***https://api-project-production-8128.up.railway.app***. It has two primary components: Persons and Companies. Requests for each should use the following endpoints:
+This API can be reached at its primary root at ***https://api-project-production-8128.up.railway.app***. It has two primary components: Persons and Companies. Requests for each should use the following endpoints, with the specific purposes outlined further below:
 
-  #### Retrieving All
+  Root: "/"  
+  ID: "/:id"  
+  Name: "/name/:name_en"  
+
+  ### Retrieving All
   To retrieve all companies or persons, use the base root, followed by "/companies" or "/persons", respectively. The URL should reflect one of the following:  
 
     https://api-project-production-8128.up.railway.app/companies  
     https://api-project-production-8128.up.railway.app/persons  
 
-  #### Retrieving Individual Records
+  ### Retrieving Individual Records
   To retrieve an individual record for a company or person, use the respective URL under "Retrieving All" and add the required ObjectID after a forward slash. An example of each has been provided below:  
 
     https://api-project-production-8128.up.railway.app/companies/63add33d63ee199b43d12204  //Central Bank of the Russian Federation (Bank of Russia)  
     https://api-project-production-8128.up.railway.app/persons/63add35b63ee199b43d13ca0  //DOROSHENKO Andrey Nikolaevich  
 
-  #### Retrieving Individual Records By Name
+  ### Retrieving Individual Records By Name
   To retrieve an individual record for a company or person by name, use the respective URL under "Retrieving All" and add "/name/", followed by the name of the company or person sought. 
   
   **N.B.** This function is partially functional; as such, not all records may be discoverable by this method. Names must be entered exactly as they are written within the database. This function was tested in Firefox and spaces were permitted; however, proper syntax replaces the spaces with "%20".
@@ -32,13 +36,32 @@ This API can be reached at its primary root at ***https://api-project-production
     https://api-project-production-8128.up.railway.app/companies/name/Central%20Bank%20of%20the%20Russian%20Federation%20(Bank%20of%20Russia)  
     https://api-project-production-8128.up.railway.app/persons/name/DOROSHENKO%20Andrey%20Nikolaevich  
 
-  #### Creating New Records
-  To generate a new record, all requests should be sent to the respective URL listed under "Retrieve All". The required fields for both companies and persons are the name in English (name_en), the name in Russian (name_ru), and the company or person ID (company_id; person_id). The comprehensive list of available fields can be found in the "models" folder of the repository, available [here][GitHub_Repository].
+  ### Creating New Records
+  To generate a new record, all post requests should be sent to the respective URL listed under "Retrieve All". The body of the request must contain the following required fields for both companies and persons: the name in English (name_en), the name in Russian (name_ru), and the company or person ID (company_id; person_id). The comprehensive list of available fields can be found in the "models" folder of the repository, available [here][GitHub_Repository].
 
-### Technology Utilized
-Express | MongoDB | Mongoose | Node.js | Cors | Morgan
+  ### Updating Records
+  To update a record, put requests must utilize the URL with the ObjectID of the record for which an update is being submitted, similar to the URLs listed under "Retrieving Individual Records". The body of the request must contain the field name, for which the value is to be changed, exactly as it is written in the models of the [GitHub Repository][GitHub_Repository].
 
-### Potential Amendments & Implementations
-1. Translate additional fields into English.
+  ### Deleting Records
+  To delete a record, the URL must utilize the ObjectID for the specific record, similar to the URLs listed under "Retrieving Individual Records". 
+
+## Technology Utilized
+ Cors | CSS | Express | HTML | JavaScript | MongoDB | Mongoose | Morgan | Node.js
+
+## Technical Requirements
+- Create a functional API utilizing Express and Mongoose
+- Develop one or more models with respective RESTful routes and controllers
+- Implement full CRUD functionality for each model
+- Deploy the API via Railway for public accessibility
+
+## Notes
+- All testing of the API for access - both prior to and following deployment - was conducted utilizing Firefox.
+- All testing of the CRUD functionality was conducted utilizing Postman.
+
+## Potential Amendments & Implementations
+1. Create a search bar at the base root to search for records based on partial elements of given fields.
+2. Create pathways to accept non-English values, such as for the Russian name.
+3. Add token authentication.
+4. Translate additional fields into English to make the API more accessible.
 
 [GitHub_Repository]: https://github.com/individual-ism/api-project
