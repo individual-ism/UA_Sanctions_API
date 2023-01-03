@@ -60,8 +60,10 @@ This API can be reached at its primary root at ***https://api-project-production
 - Implement full CRUD functionality for each model
 - Deploy the API via Railway for public accessibility
 
-## Notes
+## Notes & Issues
 - All testing of the API for access - both prior to and following deployment - was conducted utilizing Firefox.
+- Final CRUD testing was conducted utilizing [swagger.io][Swagger].
+- CSS styling was not applied and will be investigated.
 
 ## Potential Amendments & Implementations
 1. Create a search bar at the base root to search for records based on partial elements of given fields.
@@ -69,4 +71,7 @@ This API can be reached at its primary root at ***https://api-project-production
 3. Add token authentication.
 4. Translate additional fields into English to make the API more accessible.
 
+![Flag of Ukraine](./Ukraine_Flag.jpg)
+
 [GitHub_Repository]: https://github.com/individual-ism/api-project
+[Swagger]: https://swagger.io/tools/swagger-inspector/
