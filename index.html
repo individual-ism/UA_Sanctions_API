@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>UA Sanctions API</h1>
-    <h6>A listing of companies and persons sanctioned in response to the Russian invasion of Ukraine</h6>
+    <h5>A listing of companies and persons sanctioned in response to the Russian invasion of Ukraine</h6>
 
     <img src="./слава.jpg" alt="Слава Україні | Героям Слава">
 
@@ -19,7 +19,7 @@
         <p>This API is bears information on the Ukrainian sanctions list, as of December 2022.</p>
         
     <h3>Searching with API</h3>
-        <p>This API can be reached at its primary root at ***https://api-project-production-8128.up.railway.app***. It has two primary components: Persons and Companies. Requests for each should use the following endpoints, with the specific purposes outlined further below:
+        <p>This API can be reached at its primary root at <strong>https://api-project-production-8128.up.railway.app</strong>. It has two primary components: Persons and Companies. Requests for each should use the following endpoints, with the specific purposes outlined further below:
         <ul>
             <li>Root: "/"</li>
             <li>ID: "/:id"</li>
@@ -28,61 +28,65 @@
 
         </p> 
         
-          ### Retrieving All
-          To retrieve all companies or persons, use the base root, followed by "/companies" or "/persons", respectively. The URL should reflect one of the following:  
+          <h3> Retrieving All</h3>
+          <p>To retrieve all companies or persons, use the base root, followed by "/companies" or "/persons", respectively. The URL should reflect one of the following:</p>
+        <ul>
+            <li>https://api-project-production-8128.up.railway.app/companies</li>
+            <li>https://api-project-production-8128.up.railway.app/persons</li>
+        </ul>
+          <img src="ac.jpg" alt="All Companies">
         
-            https://api-project-production-8128.up.railway.app/companies  
-            https://api-project-production-8128.up.railway.app/persons  
+          <h3> Retrieving Individual Records </h3>
+          <p>To retrieve an individual record for a company or person, use the respective URL under "Retrieving All" and add the required ObjectID after a forward slash. An example of each has been provided below:</p>
+        <ul>
+            <li>https://api-project-production-8128.up.railway.app/companies/63add33d63ee199b43d12204  //Central Bank of the Russian Federation (Bank of Russia)</li>
+            <li>https://api-project-production-8128.up.railway.app/persons/63add35b63ee199b43d13ca0  //DOROSHENKO Andrey Nikolaevich</li>
+        </ul>
+          <img src="./icbid.jpg" alt="Individual Record By ID">
         
-          ![All Companies](./ac.jpg)
-        
-          ### Retrieving Individual Records
-          To retrieve an individual record for a company or person, use the respective URL under "Retrieving All" and add the required ObjectID after a forward slash. An example of each has been provided below:  
-        
-            https://api-project-production-8128.up.railway.app/companies/63add33d63ee199b43d12204  //Central Bank of the Russian Federation (Bank of Russia)  
-            https://api-project-production-8128.up.railway.app/persons/63add35b63ee199b43d13ca0  //DOROSHENKO Andrey Nikolaevich 
-        
-          ![Individual Record By ID](./icbid.jpg) 
-        
-          ### Retrieving Individual Records By Name
-          To retrieve an individual record for a company or person by name, use the respective URL under "Retrieving All" and add "/name/", followed by the name of the company or person sought. 
+          <h3> Retrieving Individual Records By Name </h3>
+          <p>To retrieve an individual record for a company or person by name, use the respective URL under "Retrieving All" and add "/name/", followed by the name of the company or person sought.</p>
           
-          **N.B.** This function is partially functional; as such, not all records may be discoverable by this method. Names must be entered exactly as they are written within the database. This function was tested in Firefox and spaces were permitted; however, proper syntax replaces the spaces with "%20".
+          <p><strong>N.B.</strong> This function is partially functional; as such, not all records may be discoverable by this method. Names must be entered exactly as they are written within the database. This function was tested in Firefox and spaces were permitted; however, proper syntax replaces the spaces with "%20".</p>
           
-          Examples:  
+          <p>Examples:</p> 
+        <ul>
+            <li>https://api-project-production-8128.up.railway.app/companies/name/Central%20Bank%20of%20the%20Russian%20Federation%20(Bank%20of%20Russia)</li>
+            <li>https://api-project-production-8128.up.railway.app/persons/name/DOROSHENKO%20Andrey%20Nikolaevich</li>
+        </ul>
+              
+<img src="./ipbn.jpg" alt="Individual Records By Name">
         
-            https://api-project-production-8128.up.railway.app/companies/name/Central%20Bank%20of%20the%20Russian%20Federation%20(Bank%20of%20Russia)  
-            https://api-project-production-8128.up.railway.app/persons/name/DOROSHENKO%20Andrey%20Nikolaevich  
+          <h3> Creating New Records</h3>
+          <p>To generate a new record, all post requests should be sent to the respective URL listed under "Retrieve All". The body of the request must contain the following required fields for both companies and persons: the name in English (name_en), the name in Russian (name_ru), and the company or person ID (company_id; person_id). The comprehensive list of available fields can be found in the "models" folder of the repository, available <a href="https://github.com/individual-ism/api-project">here</a>.</p>
         
-          ![Individual Record By Name](./ipbn.jpg)
+          <h3> Updating Records</h3>
+          <p>To update a record, put requests must utilize the URL with the ObjectID of the record for which an update is being submitted, similar to the URLs listed under "Retrieving Individual Records". The body of the request must contain the field name, for which the value is to be changed, exactly as it is written in the models of the <a href="https://github.com/individual-ism/api-project">GitHub Repository</a>.</p>
         
-          ### Creating New Records
-          To generate a new record, all post requests should be sent to the respective URL listed under "Retrieve All". The body of the request must contain the following required fields for both companies and persons: the name in English (name_en), the name in Russian (name_ru), and the company or person ID (company_id; person_id). The comprehensive list of available fields can be found in the "models" folder of the repository, available [here][GitHub_Repository].
+          <h3> Deleting Records</h3>
+          <p>To delete a record, the URL must utilize the ObjectID for the specific record, similar to the URLs listed under "Retrieving Individual Records".</p>
         
-          ### Updating Records
-          To update a record, put requests must utilize the URL with the ObjectID of the record for which an update is being submitted, similar to the URLs listed under "Retrieving Individual Records". The body of the request must contain the field name, for which the value is to be changed, exactly as it is written in the models of the [GitHub Repository][GitHub_Repository].
+        <h2> Technology Utilized</h2>
+         <p>Cors | CSS | Express | HTML | JavaScript | MongoDB | Mongoose | Morgan | Node.js</p>
         
-          ### Deleting Records
-          To delete a record, the URL must utilize the ObjectID for the specific record, similar to the URLs listed under "Retrieving Individual Records". 
+        <h2> Technical Requirements</h2>
+        <ul>
+            <li>Create a functional API utilizing Express and Mongoose</li>
+            <li>Develop one or more models with respective RESTful routes and controllers</li>
+            <li>Implement full CRUD functionality for each model</li>
+            <li>Deploy the API via Railway for public accessibility</li>
+        </ul>
         
-        ## Technology Utilized
-         Cors | CSS | Express | HTML | JavaScript | MongoDB | Mongoose | Morgan | Node.js
+        <h2> Notes</h2>
+        <p>All testing of the API for access - both prior to and following deployment - was conducted utilizing Firefox.</p>
         
-        ## Technical Requirements
-        - Create a functional API utilizing Express and Mongoose
-        - Develop one or more models with respective RESTful routes and controllers
-        - Implement full CRUD functionality for each model
-        - Deploy the API via Railway for public accessibility
+        <h2> Potential Amendments & Implementations</h2>
+        <ol>
+            <li>Create a search bar at the base root to search for records based on partial elements of given fields.</li>
+            <li>Create pathways to accept non-English values, such as for the Russian name.</li>
+            <li>Add token authentication.</li>
+            <li>Translate additional fields into English to make the API more accessible.</li>
+        </ol>
         
-        ## Notes
-        - All testing of the API for access - both prior to and following deployment - was conducted utilizing Firefox.
-        
-        ## Potential Amendments & Implementations
-        1. Create a search bar at the base root to search for records based on partial elements of given fields.
-        2. Create pathways to accept non-English values, such as for the Russian name.
-        3. Add token authentication.
-        4. Translate additional fields into English to make the API more accessible.
-        
-        [GitHub_Repository]: https://github.com/individual-ism/api-project</h3>
 </body>
 </html>
