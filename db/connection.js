@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 mongoose.set("returnOriginal", false)
 mongoose.set("strictQuery", true)
