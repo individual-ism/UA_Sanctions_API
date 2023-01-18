@@ -1,5 +1,5 @@
 body {
-    background-image: url("./Ukraine_Flag.jpg");
+    background-image: url('./Ukraine_Flag.jpg');
     text-shadow: 5px 5px white;
 }
 
