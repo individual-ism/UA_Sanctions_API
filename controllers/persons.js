@@ -58,6 +58,7 @@ export const deletePerson = async (req, res) => {
     try {
         const {id} = req.params
         const personDeleted = await Person.findByIdAndDelete(id)
+        res.json('Person Successfully Deleted')
     }
     catch {
         console.error(error)
