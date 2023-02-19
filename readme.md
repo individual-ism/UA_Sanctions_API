@@ -8,7 +8,7 @@ In light of the invasion by Russia on the 24th of February 2022, it is imperativ
 This API is bears information on the Ukrainian sanctions list, as of December 2022. 
 
 ## Searching with API
-This API can be reached at its primary root at ***https://api-project-production-8128.up.railway.app***. It has two primary components: Persons and Companies. Requests for each should use the following endpoints, with the specific purposes outlined further below:
+This API can be reached at its primary root at ***https://uasanctions.up.railway.app***. It has two primary components: Persons and Companies. Requests for each should use the following endpoints, with the specific purposes outlined further below:
 
   - Root: "/"  
   - ID: "/:id"  
@@ -17,16 +17,16 @@ This API can be reached at its primary root at ***https://api-project-production
   ### Retrieving All
   To retrieve all companies or persons, use the base root, followed by "/companies" or "/persons", respectively. The URL should reflect one of the following:  
 
-    https://api-project-production-8128.up.railway.app/companies  
-    https://api-project-production-8128.up.railway.app/persons  
+    https://uasanctions.up.railway.app/companies  
+    https://uasanctions.up.railway.app/persons  
 
   ![All Companies](./ac.jpg)
 
   ### Retrieving Individual Records
   To retrieve an individual record for a company or person, use the respective URL under "Retrieving All" and add the required ObjectID after a forward slash. An example of each has been provided below:  
 
-    https://api-project-production-8128.up.railway.app/companies/63add33d63ee199b43d12204  //Central Bank of the Russian Federation (Bank of Russia)  
-    https://api-project-production-8128.up.railway.app/persons/63add35b63ee199b43d13ca0  //DOROSHENKO Andrey Nikolaevich 
+    https://uasanctions.up.railway.app/companies/63add33d63ee199b43d12204  //Central Bank of the Russian Federation (Bank of Russia)  
+    https://uasanctions.up.railway.app/persons/63add35b63ee199b43d13ca0  //DOROSHENKO Andrey Nikolaevich 
 
   ![Individual Record By ID](./icbid.jpg) 
 
@@ -37,8 +37,8 @@ This API can be reached at its primary root at ***https://api-project-production
   
   Examples:  
 
-    https://api-project-production-8128.up.railway.app/companies/name/Central%20Bank%20of%20the%20Russian%20Federation%20(Bank%20of%20Russia)  
-    https://api-project-production-8128.up.railway.app/persons/name/DOROSHENKO%20Andrey%20Nikolaevich  
+    https://uasanctions.up.railway.app/companies/name/Central%20Bank%20of%20the%20Russian%20Federation%20(Bank%20of%20Russia)  
+    https://uasanctions.up.railway.app/persons/name/DOROSHENKO%20Andrey%20Nikolaevich  
 
   ![Individual Record By Name](./ipbn.jpg)
 
@@ -73,5 +73,5 @@ This API can be reached at its primary root at ***https://api-project-production
 
 ![Flag of Ukraine](./Ukraine_Flag.jpg)
 
-[GitHub_Repository]: https://github.com/individual-ism/api-project
+[GitHub_Repository]: https://github.com/individual-ism/UA_Sanctions_API/
 [Swagger]: https://swagger.io/tools/swagger-inspector/
