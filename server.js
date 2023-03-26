@@ -3,7 +3,6 @@ import express from "express"
 import cors from "cors"
 import morgan from "morgan"
 import routes from "./routes/index.js"
-import helmet from "helmet"
 
 let application = express()
 let port = process.env.PORT || 4150
@@ -11,22 +10,6 @@ let port = process.env.PORT || 4150
 application.use(cors())
 application.use(express.json())
 application.use(morgan("dev"))
-application.use(helmet.noCache())
-application.use(helmet({
-    frameguard: {
-        action: 'deny'
-    },
-    hsts: {
-        maxAge: 7776000,
-        force: true
-    },
-    contentSecurityPolicy: {
-        directives: {
-            defaultSrc: ["'self'"],
-            scriptSrc: ["'self'", 'trusted-cdn.com']
-        }
-    }
-}))
 
 application.use("/", routes)
 
