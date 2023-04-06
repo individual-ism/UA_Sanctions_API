@@ -3,7 +3,6 @@ import personRoutes from './persons.js';
 import companyRoutes from './companies.js';
 import path from 'path';
 import { nextTick } from 'process';
-import '../index.html';
 
 const router = Router();
 
@@ -20,6 +19,26 @@ router.get('/', (req, res) => {
             console.log('Sent: ', fileName);
         }
     });
+    // res.setHeader('Content-type','text/html')
+    // res.write(<h1>UA Sanctions API</h1>)
+    // res.write(<h5>A listing of companies and persons sanctioned in response to the Russian invasion of Ukraine</h5>)
+    // res.write()
+    // res.write()
+    // res.write()
+    // res.write()
+    // res.write()
+    // res.write()
+    // res.write()
+    // res.write()
+    // res.write()
+    // res.write()
+    // res.write()
+    // res.write()
+    // res.write()
+    // res.write()
+    // res.write()
+    // res.write()
+    // res.write()
 });
 
 router.use('/companies', companyRoutes);
