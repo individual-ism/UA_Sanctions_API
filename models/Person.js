@@ -1,19 +1,19 @@
-import mongoose from "mongoose"
+import mongoose from 'mongoose';
 
-let Schema = mongoose.Schema
+let Schema = mongoose.Schema;
 
 const personSchema = new Schema({
     person_id: {
         type: Number,
-        required: true
+        required: true,
     },
     name_en: {
         type: String,
-        required: true
+        required: true,
     },
     name_ru: {
         type: String,
-        required: true
+        required: true,
     },
     position: {
         type: String,
@@ -25,92 +25,92 @@ const personSchema = new Schema({
         type: String,
     },
     subcategory_1: {
-        type: String
+        type: String,
     },
     subcategory_2: {
-        type: String
+        type: String,
     },
     subcategory_3: {
-        type: String
+        type: String,
     },
     sanctions_es: {
-        type: Number
+        type: Number,
     },
     sanctions_gb: {
-        type: Number
+        type: Number,
     },
     sanctions_us: {
-        type: Number
+        type: Number,
     },
     sanctions_ca: {
-        type: Number
+        type: Number,
     },
     sanctions_ch: {
-        type: Number
+        type: Number,
     },
     sanctions_au: {
-        type: Number
+        type: Number,
     },
     sanctions_jp: {
-        type: Number
+        type: Number,
     },
     sanctions_pl: {
-        type: Number
+        type: Number,
     },
     sanctions_ua: {
-        type: Number
+        type: Number,
     },
     sanctions_nz: {
-        type: Number
+        type: Number,
     },
     sanctions_es_date: {
-        type: String
+        type: String,
     },
     sanctions_gb_date: {
-        type: String
+        type: String,
     },
     sanctions_us_date: {
-        type: String
+        type: String,
     },
     sanctions_ca_date: {
-        type: String
+        type: String,
     },
     sanctions_ch_date: {
-        type: String
+        type: String,
     },
     sanctions_au_date: {
-        type: String
+        type: String,
     },
     sanctions_jp_date: {
-        type: String
+        type: String,
     },
     sanctions_pl_date: {
-        type: String
+        type: String,
     },
     sanctions_ua_date: {
-        type: String
+        type: String,
     },
     sanctions_nz_date: {
-        type: String
+        type: String,
     },
     photo: {
-        type: String
+        type: String,
     },
     dob: {
-        type: String
+        type: String,
     },
     dod: {
-        type: String
+        type: String,
     },
     cob: {
-        type: String
+        type: String,
     },
     related_persons: {
-        type: Array
+        type: Array,
     },
     related_companies: {
-        type: Array
-    }
-})
+        type: Array,
+    },
+});
 
-export default mongoose.model("persons", personSchema)
+export default mongoose.model('persons', personSchema);

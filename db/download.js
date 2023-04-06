@@ -1,28 +1,27 @@
-import fetch from "node-fetch";
-import { promises as fsPromises } from "fs";
+import fetch from 'node-fetch';
+import { promises as fsPromises } from 'fs';
+import axios from 'axios';
 
-const seedPeople = () => {
-  try {
-    fetch("https://sanctions.nazk.gov.ua/api/person/")
-      .then((resP) => resP.json())
-      .then((dataP) => {
-        fsPromises.writeFile(`${process.cwd()}/seed/persons.json`, JSON.stringify(dataP));
-      });
-  } catch {
-    console.error(error);
-  }
+const seedPeople = async () => {
+    try {
+        await axios.get(
+            'https://sanctions.nazk.gov.ua/api/person/'
+        );
+        return response.data;
+    } catch {
+        console.error(error);
+    }
 };
 
 const seedCompanies = async () => {
-  try {
-    await fetch("https://sanctions.nazk.gov.ua/api/company/")
-      .then((res) => res.json())
-      .then((dataC) => {
-        fsPromises.writeFile(`${process.cwd()}/seed/companies.json`, JSON.stringify(dataC));
-      });
-  } catch {
-    console.error(error);
-  }
+    try {
+        await axios.get(
+            'https://sanctions.nazk.gov.ua/api/company/'
+        );
+        return response.data;
+    } catch {
+        console.error(error);
+    }
 };
 
 seedPeople();
