@@ -21,10 +21,10 @@ router.get('/', (req, res) => {
     // });
     // res.send(
     // res.setHeader('Content-type','text/html')
-    res.write(<h1>UA Sanctions API</h1>);
-    res.write(<h5>A listing of companies and persons sanctioned in response to the Russian invasion of Ukraine</h5>);
-    res.write(<a href='https://uasanctions.up.railway.app/companies'>Sanctioned Companies</a>);
-    res.write(<a href='https://uasanctions.up.railway.app/persons'>Sanctioned Persons</a>)
+    res.write('<h1>UA Sanctions API</h1>');
+    res.write('<h5>A listing of companies and persons sanctioned in response to the Russian invasion of Ukraine</h5>');
+    res.write("<a href='https://uasanctions.up.railway.app/companies'>Sanctioned Companies</a>");
+    res.write("<a href='https://uasanctions.up.railway.app/persons'>Sanctioned Persons</a>")
     res.end();
     // )
 });
