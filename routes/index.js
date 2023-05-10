@@ -7,7 +7,28 @@ import { nextTick } from 'process';
 const router = Router();
 
 router.get('/', (req, res) => {
-    res.send("UA Sanctions API | Sanctioned Companies: https://uasanctions.up.railway.app/companies | Sanctioned Persons: https://uasanctions.up.railway.app/persons")
+    // res.send("UA Sanctions API | Sanctioned Companies: https://uasanctions.up.railway.app/companies | Sanctioned Persons: https://uasanctions.up.railway.app/persons")
+    const __dirname = path.resolve(path.dirname(''));
+    let options = {
+        root: path.join(__dirname)
+    };
+    let fileName = 'index.html';
+    res.sendFile(fileName, options, (err) => {
+        if (err) {
+            nextTick(err);
+        } else {
+            console.log('Sent: ', fileName);
+        }
+    });
+    // res.send(
+    // res.setHeader('Content-type','text/html')
+    // res.write('<h1>UA Sanctions API</h1>');
+    // res.write('<h5>A listing of companies and persons sanctioned in response to the Russian invasion of Ukraine</h5>');
+    // res.write("<a href='https://uasanctions.up.railway.app/companies'>Sanctioned Companies</a>");
+    // res.write("<a href='https://uasanctions.up.railway.app/persons'>Sanctioned Persons</a>")
+    // res.end();
+    // )
+
 });
 
 router.use('/companies', companyRoutes);
