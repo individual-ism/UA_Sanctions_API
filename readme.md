@@ -8,7 +8,7 @@ In light of the invasion by Russia on the 24th of February 2022, it is imperativ
 This API is bears information on the Ukrainian sanctions list, as of December 2022. 
 
 ## Searching with API
-This API can be reached at its primary root at ***https://uasanctions.up.railway.app***. It has two primary components: Persons and Companies. Requests for each should use the following endpoints, with the specific purposes outlined further below:
+This API can be reached at its primary root at ***https://uasanctions.netlify.app***. It has two primary components: Persons and Companies. Requests for each should use the following endpoints, with the specific purposes outlined further below:
 
   - Root: "/"  
   - ID: "/:id"  
@@ -17,16 +17,16 @@ This API can be reached at its primary root at ***https://uasanctions.up.railway
   ### Retrieving All
   To retrieve all companies or persons, use the base root, followed by "/companies" or "/persons", respectively. The URL should reflect one of the following:  
 
-    https://uasanctions.up.railway.app/companies  
-    https://uasanctions.up.railway.app/persons  
+    https://uasanctions.netlify.app/companies  
+    https://uasanctions.netlify.app/persons  
 
   ![All Companies](https://res.cloudinary.com/de6y97wif/image/upload/v1677557196/ac_odvob4.png)
 
   ### Retrieving Individual Records
   To retrieve an individual record for a company or person, use the respective URL under "Retrieving All" and add the required ObjectID after a forward slash. An example of each has been provided below:  
 
-    https://uasanctions.up.railway.app/companies/63add33d63ee199b43d12204  //Central Bank of the Russian Federation (Bank of Russia)  
-    https://uasanctions.up.railway.app/persons/63add35b63ee199b43d13ca0  //DOROSHENKO Andrey Nikolaevich 
+    https://uasanctions.netlify.app/companies/63add33d63ee199b43d12204  //Central Bank of the Russian Federation (Bank of Russia)  
+    https://uasanctions.netlify.app/persons/63add35b63ee199b43d13ca0  //DOROSHENKO Andrey Nikolaevich 
 
   ![Individual Record By ID](https://res.cloudinary.com/de6y97wif/image/upload/v1677557198/icbid_xgbbwx.png) 
 
@@ -37,8 +37,8 @@ This API can be reached at its primary root at ***https://uasanctions.up.railway
   
   Examples:  
 
-    https://uasanctions.up.railway.app/companies/name/Central%20Bank%20of%20the%20Russian%20Federation%20(Bank%20of%20Russia)  
-    https://uasanctions.up.railway.app/persons/name/DOROSHENKO%20Andrey%20Nikolaevich  
+    https://uasanctions.netlify.app/companies/name/Central%20Bank%20of%20the%20Russian%20Federation%20(Bank%20of%20Russia)  
+    https://uasanctions.netlify.app/persons/name/DOROSHENKO%20Andrey%20Nikolaevich  
 
   ![Individual Record By Name](https://res.cloudinary.com/de6y97wif/image/upload/v1677557199/ipbn_y9iuhc.png)
 
