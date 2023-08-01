@@ -73,5 +73,7 @@ This API can be reached at its primary root at ***https://uasanctions.netlify.ap
 
 ![Flag of Ukraine](https://res.cloudinary.com/de6y97wif/image/upload/v1677557214/Ukraine_Flag_mflkgb.jpg)
 
+###### Last Updated 2023 August 01
+
 [GitHub_Repository]: https://github.com/individual-ism/UA_Sanctions_API/
 [Swagger]: https://swagger.io/tools/swagger-inspector/
