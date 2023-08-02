@@ -10,6 +10,23 @@ let port = process.env.PORT || 4150;
 application.use(cors());
 application.use(express.json());
 application.use(morgan('dev'));
+application.use(helmet.noCache())
+application.use(helmet({
+    frameguard: {
+        action: 'deny'
+    },
+    hsts: {
+        maxAge: 7776000,
+        force: true
+    },
+    contentSecurityPolicy: {
+        directives: {
+            defaultSrc: ["'self'"],
+            scriptSrc: ["'self'", 'trusted-cdn.com']
+        }
+    },
+    dnsPrefetchControl: false
+}))
 
 application.use('/', routes);
 
