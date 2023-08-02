@@ -16,7 +16,8 @@ application.use(helmet({
         action: 'deny'
     },
     hsts: {
-        maxAge: 7776000
+        maxAge: 7776000,
+        force: true
     },
     contentSecurityPolicy: {
         directives: {
