@@ -12,7 +12,7 @@ application.use(cors());
 application.use(express.json());
 application.use(morgan('dev'));
 application.use(helmet())
-// application.use(helmet.noCache())
+application.use(helmet.noCache())
 // application.use(helmet({
 //     frameguard: {
 //         action: 'deny'
