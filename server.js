@@ -21,7 +21,7 @@ application.use(helmet({
     contentSecurityPolicy: {
         directives: {
             defaultSrc: ["'self'"],
-            scriptSrc: ["'self'", 'trusted-cdn.com']
+            scriptSrc: ["'self'", 'heroku.com', 'herokuapp.com']
         }
     },
     dnsPrefetchControl: false
