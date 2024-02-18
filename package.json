@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "seed": "node seed/seed.js",
-    "start": "node server.js"
+    "start": "node server.js",
+    "preinstall": "npx only-allow pnpm"
   },
   "author": "",
   "license": "ISC",
